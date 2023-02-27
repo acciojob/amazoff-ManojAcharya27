@@ -86,14 +86,13 @@ public class OrderRepository {
     }
 
     public void deletePartnerById(String partnerId){
-        if(deliveryPartnerHashMap.containsKey(partnerId)){
-            deliveryPartnerHashMap.remove(partnerId);
-        }
-        if(partnerIdAndOrder.containsKey(partnerId)){
+        deliveryPartnerHashMap.remove(partnerId);
+
             List<String> orders=partnerIdAndOrder.get(partnerId);
+            partnerIdAndOrder.remove(partnerId);
             for(String x: orders){
                 orderAndPartner.remove(orders);
-            }
+
         }
     }
     public void deleteOrderById(String orderId){
