@@ -60,7 +60,7 @@ public class OrderService {
     }
 
     public String  getLastDeliveryTimeByPartnerId(String partnerId){
-        return  null;
+        return  orderRepository.getLastDeliveryTimeByPartnerId(partnerId);
     }
 
 
