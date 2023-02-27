@@ -29,6 +29,7 @@ public class OrderRepository {
             List<String> orders=new ArrayList<>();
             if(partnerIdAndOrder.containsKey(partnerId)) orders=partnerIdAndOrder.get(partnerId);
             orders.add(orderId);
+            partnerIdAndOrder.put(partnerId,orders);
              orderAndPartner.put(orderId,partnerId);
             DeliveryPartner deliveryPartner=deliveryPartnerHashMap.get(partnerId);
             deliveryPartner.setNumberOfOrders(orders.size());
