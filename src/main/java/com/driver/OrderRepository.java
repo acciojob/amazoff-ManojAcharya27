@@ -92,7 +92,7 @@ public class OrderRepository {
             List<String> orders=partnerIdAndOrder.get(partnerId);
             partnerIdAndOrder.remove(partnerId);
             for(String x: orders){
-                orderAndPartner.remove(orders);
+                orderAndPartner.remove(x);
 
         }
     }
